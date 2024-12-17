@@ -1,0 +1,56 @@
+{
+	"network": {
+		"name": "mainnet",
+		"description": "Symbol mainnet network"
+	},
+	"port": 3000,
+	"protocol": "HTTP",
+	"sslKeyPath": "",
+	"sslCertificatePath": "",
+	"crossDomain": {
+		"allowedHosts": ["*"],
+		"allowedMethods": ["GET", "POST", "PUT", "OPTIONS"]
+	},
+
+	"apiNode": {
+		"host": "client",
+		"port": 7900,
+		"timeout": 1000,
+		"tlsClientCertificatePath": "/certificates/node.crt.pem",
+		"tlsClientKeyPath": "/certificates/node.key.pem",
+		"tlsCaCertificatePath": "/certificates/ca.crt.pem",
+
+		"inflationPropertyFilePath": "/userconfig/resources/config-inflation.properties",
+		"networkPropertyFilePath": "/userconfig/resources/config-network.properties",
+		"nodePropertyFilePath": "/userconfig/resources/config-node.properties"
+	},
+
+	"throttling": {
+		"burst": 80,
+		"rate": 60
+	},
+	"logging": {
+		"console": {
+			"formats": ["colorize", "simple"],
+
+			"level": "verbose",
+			"handleExceptions": true
+		},
+		"file": {
+			"formats": ["prettyPrint"],
+
+			"level": "verbose",
+			"handleExceptions": true,
+
+			"filename": "/logs/rest/catapult-rest.log",
+			"maxsize": 20971520,
+			"maxFiles": 100
+		}
+	},
+
+	"deployment": {
+		"deploymentTool": "shoestring",
+		"deploymentToolVersion": "0.1.0",
+		"lastUpdatedDate": "n/a"
+	}
+}
