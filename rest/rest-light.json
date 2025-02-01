@@ -9,7 +9,7 @@
 	"sslCertificatePath": "",
 	"crossDomain": {
 		"allowedHosts": ["*"],
-		"allowedMethods": ["GET", "POST", "PUT", "OPTIONS"]
+		"allowedMethods": ["GET"]
 	},
 
 	"apiNode": {
